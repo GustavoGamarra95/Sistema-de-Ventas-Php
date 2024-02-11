@@ -24,11 +24,12 @@ CREATE TABLE usuarios(
     nombre VARCHAR(255) NOT NULL,
     telefono VARCHAR(25) NOT NULL,
     direccion VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL+
+    password VARCHAR(255) NOT NULL
+);
 
-INSERT INTO usuarios (usuario, nombre, telefono, direccion, password) VALUES ("test", "Usuario1", "123456789", "LocalTest", "1234");
+INSERT INTO usuarios (usuario, nombre, telefono, direccion, password) VALUES ("test", "test", "0000000", "Narnia", "1234");
 
-CREATE TABLE ventas(
+qCREATE TABLE ventas(
     id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     fecha DATETIME NOT NULL,
     total DECIMAL(9,2) NOT NULL,
@@ -36,11 +37,10 @@ CREATE TABLE ventas(
     idCliente BIGINT
 );  
 
-CREATE TABLE productos_ventas(usuariosidusuario
+CREATE TABLE productos_ventas(
     id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cantidad INT NOT NULL,
     precio DECIMAL(8,2) NOT NULL,
     idProducto BIGINT NOT NULL,
     idVenta BIGINT NOT NULL
 );
-
